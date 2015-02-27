@@ -503,7 +503,6 @@ SOFTWARE.
 	};
 
 	p.onSubstClick = function(evt) {
-		Tracking.event("substitution", !this.substEnabled?"show":"hide");
 		this.showSubstitution(!this.substEnabled);
 	};
 
@@ -519,7 +518,6 @@ SOFTWARE.
 	};
 
 	p.updateFlagsMenu = function() {
-		Tracking.event("flags", "show");
 		this.flagsMenu.setFlags(this.getFlags());
 	};
 

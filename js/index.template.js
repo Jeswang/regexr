@@ -88,9 +88,6 @@ SOFTWARE.
 		ExpressionModel.docView = docView;
 		ExpressionModel.saveState();
 
-		this.videoLink = $.el(".video-link");
-		this.videoLink.addEventListener("click", $.bind(this, this.showVideo));
-		this.handleVideoCloseProxy = $.bind(this, this.handleVideoClick);
 		var _this = this;
 
 		// wdg:: This is more efficient then using a CSS animation.
@@ -183,19 +180,5 @@ SOFTWARE.
 
 })();
 
-WebFont.load({
-	 google: {
-		 families: ["Source Code Pro:400,700", "Cabin:400,700"],
-		 fontinactive: function (family, fvd) {
-			 WebFont.load({
-							  custom: {
-								  families: ["Source Code Pro:400,700", "Cabin:400,700"],
-								  urls: ["css/fontFallback.css"]
-							  }
-						  });
-		 }
-	 },
-	 active: function () {
-		window.regexr = new window.RegExr();
-	 }
- });
+window.regexr = new window.RegExr();
+

@@ -174,7 +174,6 @@ SOFTWARE.
 				parent = parent.parent;
 			}
 			var parent = parentPath.length?parentPath.join("/")+"/":"";
-			Tracking.page(parent + item.label || item.id);
 		}
 	};
 

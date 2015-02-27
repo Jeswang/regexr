@@ -75,17 +75,14 @@ SOFTWARE.
 		$.addClass($.el("#shareCopyLink", this.element), "hidden");
 
 		this.createNoFlashCopyLink(this.copyExpression, function() {
-			Tracking.event("share", "copy", "expression-noflash");
 			return _this.docsView.getExpression();
 		});
 
 		this.createNoFlashCopyLink(this.copyPattern, function() {
-			Tracking.event("share", "copy", "pattern-noflash");
 			return _this.docsView.getPattern();
 		});
 
 		this.createNoFlashCopyLink(this.copyJavascript, function() {
-			Tracking.event("share", "copy", "javascript-noflash");
 			return _this.createJavascriptCopy();
 		});
 	};
@@ -128,22 +125,18 @@ SOFTWARE.
 
 		this.createCopyLink(this.copyLink, function (client, args) {
 			client.setText(_this.shareLink.value);
-			Tracking.event("share", "copy", "share");
 		});
 
 		this.createCopyLink(this.copyExpression, function (client, args) {
 	 		client.setText(_this.docsView.getExpression());
-			Tracking.event("share", "copy", "expression");
 		});
 
 		this.createCopyLink(this.copyPattern, function (client, args) {
 			client.setText(_this.docsView.getPattern());
-			Tracking.event("share", "copy", "pattern");
 		});
 
 		this.createCopyLink(this.copyJavascript, function (client, args) {
 			client.setText(_this.createJavascriptCopy());
-			Tracking.event("share", "copy", "javascript");
 		});
 	};
 
@@ -202,7 +195,6 @@ SOFTWARE.
 	}
 
 	p.show = function() {
-		Tracking.event("share", "show");
 
 		Utils.removeClass(this.saveView, "visible hidden");
 		Utils.removeClass(this.shareLinkView, "visible hidden");
